@@ -1,5 +1,5 @@
 """
-PhishLab — Robustesse adversariale (cahier des charges §3.5)
+PhishLab - Robustesse adversariale (cahier des charges §3.5)
 ===========================================================
 
 On se met à la place de l'attaquant : comment contourner le détecteur ? Puis on
@@ -171,7 +171,7 @@ def apply_attack(email: Email, name: str) -> Email:
 
 
 # --------------------------------------------------------------------------- #
-# DÉFENSES — pipeline de canonicalisation
+# DÉFENSES - pipeline de canonicalisation
 # --------------------------------------------------------------------------- #
 def strip_zero_width(text: str) -> str:
     return "".join(c for c in text if c not in _ZERO_WIDTH)

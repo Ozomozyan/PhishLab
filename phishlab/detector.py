@@ -72,12 +72,12 @@ class PhishDetector:
         self.phish_threshold = phish_threshold
         self.calibrate = calibrate
 
-        # Vectoriseur TF-IDF : mots (1-2 grammes) — capte le vocabulaire de phishing.
+        # Vectoriseur TF-IDF : mots (1-2 grammes) - capte le vocabulaire de phishing.
         self.tfidf_word = TfidfVectorizer(
             analyzer="word", ngram_range=(1, 2), min_df=3, max_df=0.9,
             max_features=8000, sublinear_tf=True,
         )
-        # Vectoriseur caractères (3-5 grammes) — robuste à l'obfuscation/typos.
+        # Vectoriseur caractères (3-5 grammes) - robuste à l'obfuscation/typos.
         self.tfidf_char = TfidfVectorizer(
             analyzer="char_wb", ngram_range=(3, 5), min_df=3,
             max_features=6000, sublinear_tf=True,
@@ -129,7 +129,7 @@ class PhishDetector:
         X, _ = self._build_matrix(emails, fit=True)
         base = self._make_model()
         if self.calibrate:
-            # Calibration des probabilités (sigmoïde) — important : "80% de risque"
+            # Calibration des probabilités (sigmoïde) - important : "80% de risque"
             # doit refléter ~80% de phishing réel (cf. plan d'évaluation).
             self.model = CalibratedClassifierCV(base, method="sigmoid", cv=3)
             self.model.fit(X, labels)

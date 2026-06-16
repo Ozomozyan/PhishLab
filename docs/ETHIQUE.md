@@ -1,4 +1,4 @@
-# Cadre éthique et conformité — PhishLab
+# Cadre éthique et conformité - PhishLab
 
 PhishLab traite d'un sujet sensible : le phishing. Ce document fixe les règles
 non négociables du projet.
@@ -8,7 +8,7 @@ non négociables du projet.
 ## 1. Principe directeur
 
 **PhishLab est un outil exclusivement défensif.** Il sert à *détecter*,
-*expliquer*, *sensibiliser* et *anticiper* — jamais à attaquer.
+*expliquer*, *sensibiliser* et *anticiper* - jamais à attaquer.
 
 ---
 

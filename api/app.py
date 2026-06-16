@@ -1,5 +1,5 @@
 """
-api/app.py — Backend Flask de PhishLab
+api/app.py - Backend Flask de PhishLab
 =====================================
 
 API REST légère qui expose le détecteur, l'explicabilité, la simulation et la
@@ -99,7 +99,7 @@ def analyze():
 def metrics():
     p = REPORTS / "metrics.json"
     if not p.exists():
-        return jsonify({"error": "metrics.json absent — lancez train.py"}), 404
+        return jsonify({"error": "metrics.json absent - lancez train.py"}), 404
     return jsonify(json.loads(p.read_text()))
 
 
@@ -107,7 +107,7 @@ def metrics():
 def robustness():
     p = REPORTS / "robustness.json"
     if not p.exists():
-        return jsonify({"error": "robustness.json absent — lancez eval_robustness.py"}), 404
+        return jsonify({"error": "robustness.json absent - lancez eval_robustness.py"}), 404
     return jsonify(json.loads(p.read_text()))
 
 
@@ -115,7 +115,7 @@ def robustness():
 def predictive():
     p = REPORTS / "predictive.json"
     if not p.exists():
-        return jsonify({"error": "predictive.json absent — lancez eval_predictive.py"}), 404
+        return jsonify({"error": "predictive.json absent - lancez eval_predictive.py"}), 404
     return jsonify(json.loads(p.read_text()))
 
 

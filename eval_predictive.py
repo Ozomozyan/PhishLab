@@ -3,8 +3,8 @@ eval_predictive.py
 =================
 
 Produit les livrables de la simulation prédictive :
-  * reports/predictive.json        — projections + test de robustesse prospectif
-  * reports/predictive_trends.png  — courbes de diffusion (historique + projection)
+  * reports/predictive.json        - projections + test de robustesse prospectif
+  * reports/predictive_trends.png  - courbes de diffusion (historique + projection)
 """
 
 from __future__ import annotations

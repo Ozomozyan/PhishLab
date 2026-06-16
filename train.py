@@ -176,7 +176,7 @@ def export_linear_scorer(detector: PhishDetector, path: Path):
     """
     Exporte un scorer linéaire LÉGER (poids des features tabulaires + termes les
     plus pesants) au format JSON. Permet une démo 100% côté navigateur, sans
-    serveur Python — illustre la portabilité 'edge' du cahier des charges.
+    serveur Python - illustre la portabilité 'edge' du cahier des charges.
     """
     weights = detector._linear_word_weights()
     if weights is None:

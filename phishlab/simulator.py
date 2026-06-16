@@ -9,7 +9,7 @@ reception d'entrainement" (sensibilisation des utilisateurs) et estimer un
 TAUX DE CLIC plausible par scenario, afin de prioriser les campagnes de
 formation.
 
-CADRE ETHIQUE — strict (rappel du cahier des charges) :
+CADRE ETHIQUE - strict (rappel du cahier des charges) :
   * On ne genere que des leurres SYNTHETIQUES, dans un bac a sable.
   * AUCUN envoi reel, AUCune cible reelle, aucune collecte de donnees.
   * Les "taux de clic" sont SIMULES par un modele de persuasion calibre sur des

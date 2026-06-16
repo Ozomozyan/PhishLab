@@ -2,7 +2,7 @@
 phishlab.predictive
 ===================
 
-Simulation predictive (cf. cahier des charges §5) — le volet "anticiper demain".
+Simulation predictive (cf. cahier des charges §5) - le volet "anticiper demain".
 
 Trois etapes :
 

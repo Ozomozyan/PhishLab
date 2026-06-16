@@ -1,7 +1,7 @@
-# Model Card — Détecteur PhishLab
+# Model Card - Détecteur PhishLab
 
 Document de transparence sur le modèle de détection. Il décrit honnêtement ce
-que le modèle fait, comment il a été évalué, et — surtout — **ses limites**.
+que le modèle fait, comment il a été évalué, et - surtout - **ses limites**.
 
 ---
 
@@ -13,7 +13,7 @@ que le modèle fait, comment il a été évalué, et — surtout — **ses limit
   sigmoïde (`CalibratedClassifierCV`), entraîné sur une représentation hybride :
   - 30 features **tabulaires** (StandardScaler) ;
   - TF-IDF **mots** (1–2 grammes, 8 000 dims) ;
-  - TF-IDF **caractères** (3–5 grammes, 6 000 dims) — robuste aux fautes/césures.
+  - TF-IDF **caractères** (3–5 grammes, 6 000 dims) - robuste aux fautes/césures.
 - **Pourquoi linéaire ?** Explicabilité exacte (SHAP en forme fermée),
   portabilité (export JSON → scorer navigateur), et performance équivalente aux
   modèles à arbres sur ces données (cf. §4).
@@ -42,7 +42,7 @@ Une chaîne d'annotation automatique réelle n'est jamais parfaite. Pour le simu
 
 ---
 
-## 3. Protocole d'évaluation — deux chiffres, lus différemment
+## 3. Protocole d'évaluation - deux chiffres, lus différemment
 
 | Mesure | Référence | Interprétation |
 |---|---|---|
@@ -75,11 +75,11 @@ Figures : `reports/confusion_matrix.png`, `roc_pr_curves.png`,
 
 ---
 
-## 5. Limites — à lire absolument
+## 5. Limites - à lire absolument
 
 1. **Données synthétiques et séparables.**
    Le générateur produit des classes nettement distinctes. Conséquence directe :
-   le modèle est **bimodal** — sur les 4 800 emails, **aucun** ne tombe dans la
+   le modèle est **bimodal** - sur les 4 800 emails, **aucun** ne tombe dans la
    bande `[0.42, 0.66]`. La catégorie « suspect » existe par construction
    (seuils) mais est rarement atteinte sur des emails réalistes synthétiques.
    *Sur des emails réels, plus ambigus, cette bande serait davantage peuplée.*
@@ -92,7 +92,7 @@ Figures : `reports/confusion_matrix.png`, `roc_pr_curves.png`,
    Dans les données, le phishing est très corrélé à un échec SPF/DKIM/DMARC. Le
    modèle s'appuie donc fortement sur ces signaux ; un phishing « propre »
    (domaine compromis, authentification valide) est sous-évalué. C'est une limite
-   du **jeu de données**, pas seulement du modèle — à corriger en enrichissant
+   du **jeu de données**, pas seulement du modèle - à corriger en enrichissant
    les exemples furtifs.
 
 4. **Scorer embarqué = approximation.**
@@ -129,7 +129,7 @@ nu) puis après défenses de canonicalisation :
 Lectures honnêtes :
 - Le **leetspeak** reste l'évasion la mieux résistante (récupération partielle).
 - L'**email tout-en-image** contourne toute analyse textuelle : seule une garde
-  le signale, d'où une récupération limitée — c'est un angle mort assumé.
+  le signale, d'où une récupération limitée - c'est un angle mort assumé.
 - L'**obfuscation d'URL seule** n'a pas d'effet : le modèle s'appuie aussi sur
   des signaux non-URL (texte, authentification). C'est une **force de défense en
   profondeur**, pas un artefact.

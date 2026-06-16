@@ -3,8 +3,8 @@ eval_robustness.py
 ==================
 
 Mesure la robustesse adverse du detecteur deploye et produit :
-  * reports/robustness.json  — chiffres detailles par attaque
-  * reports/robustness.png   — graphique detection (reference / attaquee / defendue)
+  * reports/robustness.json  - chiffres detailles par attaque
+  * reports/robustness.png   - graphique detection (reference / attaquee / defendue)
 
 C'est la piece maitresse de la demonstration : on montre qu'un modele "nu"
 peut etre contourne par des techniques d'evasion simples, et que la chaine de

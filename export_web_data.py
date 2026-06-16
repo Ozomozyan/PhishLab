@@ -64,7 +64,7 @@ def main():
 # Emails d'exemple (synthétiques) pour la démonstration.
 SAMPLES = [
     {
-        "name": "Phishing — PayPal (typosquat)",
+        "name": "Phishing - PayPal (typosquat)",
         "kind": "phishing",
         "subject": "URGENT : votre compte PayPaI sera suspendu sous 24h",
         "body": ("Cher client,\n\nNous avons détecté une activité suspecte sur votre "
@@ -80,7 +80,7 @@ SAMPLES = [
         "has_html": False, "attachments": [],
     },
     {
-        "name": "Phishing — Fraude au président (BEC)",
+        "name": "Phishing - Fraude au président (BEC)",
         "kind": "phishing",
         "subject": "Demande urgente et confidentielle",
         "body": ("Bonjour,\n\nJe suis en réunion et injoignable par téléphone. "
@@ -94,7 +94,7 @@ SAMPLES = [
         "has_html": False, "attachments": [],
     },
     {
-        "name": "Phishing — Réinit. Microsoft (typosquat)",
+        "name": "Phishing - Réinit. Microsoft (typosquat)",
         "kind": "phishing",
         "subject": "Microsoft : activité inhabituelle, réinitialisez votre mot de passe",
         "body": ("Cher utilisateur,\n\nNous avons détecté une connexion inhabituelle à "
@@ -111,9 +111,9 @@ SAMPLES = [
         "has_html": False, "attachments": [],
     },
     {
-        "name": "Bénin — Reçu d'achat légitime",
+        "name": "Bénin - Reçu d'achat légitime",
         "kind": "benin",
-        "subject": "Votre reçu Amazon — commande 402-7731902",
+        "subject": "Votre reçu Amazon - commande 402-7731902",
         "body": ("Bonjour Camille,\n\nMerci pour votre commande. Votre colis sera "
                  "livré entre le 12 et le 14 juin. Vous pouvez suivre votre commande "
                  "depuis votre compte : https://www.amazon.fr/orders\n\n"
@@ -124,7 +124,7 @@ SAMPLES = [
         "has_html": False, "attachments": [],
     },
     {
-        "name": "Bénin — Alerte sécurité légitime (piège difficile)",
+        "name": "Bénin - Alerte sécurité légitime (piège difficile)",
         "kind": "benin",
         "subject": "Nouvelle connexion détectée sur votre compte",
         "body": ("Bonjour,\n\nUne nouvelle connexion à votre compte a été détectée "

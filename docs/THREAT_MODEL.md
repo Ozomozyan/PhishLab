@@ -1,4 +1,4 @@
-# Threat Model — PhishLab
+# Threat Model - PhishLab
 
 Quelles menaces PhishLab cherche-t-il à détecter, quelles techniques d'évasion
 sont prises en compte, et que reste-t-il hors de portée.
@@ -92,7 +92,7 @@ Détection de référence : 100 % (300 phishing). Voir `reports/robustness.png`.
    −4 pts seulement, mais sur des leurres qui gardent des signaux structurels).
 4. **Attaques composites futures** : l'empilement texte-IA + homoglyphes +
    invisibles fait chuter la détection à 64 % (cf. simulation prédictive),
-   restaurée à 94 % par les défenses — d'où la nécessité d'un ré-entraînement
+   restaurée à 94 % par les défenses - d'où la nécessité d'un ré-entraînement
    continu.
 5. **Dérive** : de nouvelles marques, TLD ou tournures non présentes dans les
    lexiques échappent aux features dédiées (le TF-IDF caractères atténue mais ne

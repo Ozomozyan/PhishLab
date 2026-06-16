@@ -1,4 +1,4 @@
-# PhishLab — Détection et anticipation du phishing par IA
+# PhishLab - Détection et anticipation du phishing par IA
 
 > **Détecter aujourd'hui. Anticiper demain.**
 >
@@ -7,7 +7,7 @@
 > l'évolution des techniques d'attaque et teste sa propre robustesse face aux
 > méthodes d'évasion.
 
-Projet Innov — EPSI. Module **Expert IA / Ingénierie**.
+Projet Innov - EPSI. Module **Expert IA / Ingénierie**.
 
 ---
 

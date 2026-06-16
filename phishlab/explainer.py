@@ -1,5 +1,5 @@
 """
-PhishLab — Couche d'explicabilité
+PhishLab - Couche d'explicabilité
 =================================
 
 Objectif (cf. cahier des charges §3.2) : ne jamais se contenter de dire
@@ -17,7 +17,7 @@ Deux niveaux d'explication, combinés :
    c.-à-d. la contribution d'une feature = son poids × son écart à la moyenne
    du jeu d'entraînement (dans l'espace standardisé). La somme des phi_i vaut
    exactement (logit(x) - logit_baseline). On obtient donc une explication
-   additive, fidèle et instantanée — sans échantillonnage. C'est l'équivalent
+   additive, fidèle et instantanée - sans échantillonnage. C'est l'équivalent
    de `shap.LinearExplainer`. Une variante s'appuyant réellement sur la
    librairie `shap` est fournie (`shap_values_kernel`) pour le rapport.
 
@@ -167,7 +167,7 @@ def find_highlights(email: Email) -> list[Highlight]:
     text_norm = _normalize(text)
     highlights: list[Highlight] = []
 
-    # 1) URLs — suspectes (lookalike / TLD à risque / IP / raccourcisseur) vs neutres
+    # 1) URLs - suspectes (lookalike / TLD à risque / IP / raccourcisseur) vs neutres
     for m in _URL_RE.finditer(text):
         url = m.group(0)
         host = re.sub(r"^https?://", "", url).split("/")[0].split(":")[0]
@@ -175,13 +175,13 @@ def find_highlights(email: Email) -> list[Highlight]:
         dist = _nearest_brand_distance(host)
         note, kind = "Lien présent dans le message", "url"
         if dist == 0 or (0 < dist <= 2):
-            note = f"Domaine très proche d'une marque connue ({regd}) — possible typosquatting"
+            note = f"Domaine très proche d'une marque connue ({regd}) - possible typosquatting"
         elif re.search(r"\.(tk|ml|ga|cf|gq|xyz|top|live|icu|online|click|link|rest|zip)$", regd):
             note = f"Extension de domaine à risque ({regd})"
         elif re.match(r"^(\d{1,3}\.){3}\d{1,3}", host):
             note = "L'URL pointe vers une adresse IP brute"
         elif url.lower().startswith("http://"):
-            note = "Lien non chiffré (http) — destination à vérifier"
+            note = "Lien non chiffré (http) - destination à vérifier"
         highlights.append(Highlight(m.start(), m.end(), kind, url, note))
 
     # 2) Termes lexicaux (urgence / identifiants / appât / salutation générique)
@@ -283,18 +283,18 @@ def _protective_text(name: str) -> str:
 def _summarize(score: float, label: str, reasons, protective) -> str:
     pct = round(score * 100)
     if label == "phishing":
-        head = f"⚠️ Risque élevé ({pct}%) — ce message présente plusieurs signaux d'attaque."
+        head = f"⚠️ Risque élevé ({pct}%) - ce message présente plusieurs signaux d'attaque."
     elif label == "suspect":
-        head = f"Prudence ({pct}%) — ce message présente des éléments ambigus."
+        head = f"Prudence ({pct}%) - ce message présente des éléments ambigus."
     else:
-        head = f"Risque faible ({pct}%) — aucun signal fort de phishing détecté."
+        head = f"Risque faible ({pct}%) - aucun signal fort de phishing détecté."
     if reasons:
         head += " Principaux signaux : " + " ; ".join(r.text for r in reasons[:2]) + "."
     return head
 
 
 # --------------------------------------------------------------------------- #
-# Variante SHAP « réelle » (librairie shap) — pour le rapport d'évaluation
+# Variante SHAP « réelle » (librairie shap) - pour le rapport d'évaluation
 # --------------------------------------------------------------------------- #
 def shap_values_kernel(detector, emails_background, email: Email, nsamples: int = 100):
     """Calcule des valeurs SHAP via KernelExplainer sur le bloc tabulaire.
