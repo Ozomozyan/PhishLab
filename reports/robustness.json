@@ -1,0 +1,65 @@
+{
+  "baseline_detection": 1.0,
+  "n_phishing_detected": 300,
+  "threshold": 0.7,
+  "attacks": [
+    {
+      "attack": "char_spacing",
+      "detection_clean": 1.0,
+      "detection_attacked": 1.0,
+      "detection_defended": 1.0,
+      "drop": 0.0,
+      "recovered": 0.0,
+      "n": 300
+    },
+    {
+      "attack": "homoglyph",
+      "detection_clean": 1.0,
+      "detection_attacked": 0.573,
+      "detection_defended": 0.987,
+      "drop": 0.427,
+      "recovered": 0.413,
+      "n": 300
+    },
+    {
+      "attack": "leetspeak",
+      "detection_clean": 1.0,
+      "detection_attacked": 0.66,
+      "detection_defended": 0.907,
+      "drop": 0.34,
+      "recovered": 0.247,
+      "n": 300
+    },
+    {
+      "attack": "zero_width",
+      "detection_clean": 1.0,
+      "detection_attacked": 0.96,
+      "detection_defended": 1.0,
+      "drop": 0.04,
+      "recovered": 0.04,
+      "n": 300
+    },
+    {
+      "attack": "url_obfuscation",
+      "detection_clean": 1.0,
+      "detection_attacked": 0.81,
+      "detection_defended": 1.0,
+      "drop": 0.19,
+      "recovered": 0.19,
+      "n": 300
+    },
+    {
+      "attack": "image_only",
+      "detection_clean": 1.0,
+      "detection_attacked": 0.0,
+      "detection_defended": 0.543,
+      "drop": 1.0,
+      "recovered": 0.543,
+      "n": 300
+    }
+  ],
+  "interpretation": {
+    "definition": "Taux de détection = part des phishing scorés au-dessus du seuil 'phishing' (0.70).",
+    "lecture": "'chute' = détection perdue sous attaque ; 'récup' = détection restaurée par les défenses."
+  }
+}

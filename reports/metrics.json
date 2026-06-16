@@ -1,0 +1,475 @@
+{
+  "dataset": {
+    "total": 4400,
+    "train": 3300,
+    "test": 1100,
+    "phishing": 2200,
+    "benign": 2200
+  },
+  "label_protocol": {
+    "train_labels": "noisy_label",
+    "headline_eval_labels": "noisy_label (operationnel)",
+    "label_noise_rate": 0.03,
+    "note": "Metriques titre = contre etiquettes bruitees (realiste). Bloc 'intrinsic' = contre verite propre (plafond, donnees synthetiques separables)."
+  },
+  "models": {
+    "logreg": {
+      "precision": 0.9636363636363636,
+      "recall": 0.9814814814814815,
+      "f1": 0.9724770642201835,
+      "roc_auc": 0.9728571428571429,
+      "pr_auc": 0.9590948488454379,
+      "brier": 0.027461293056098304,
+      "confusion_matrix": [
+        [
+          540,
+          20
+        ],
+        [
+          10,
+          530
+        ]
+      ],
+      "per_family": {
+        "account": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9440300933453749
+        },
+        "calendar": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 44,
+          "mean_score": 0.0316671359583299
+        },
+        "ceo": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 69,
+          "mean_score": 0.9704161851647407
+        },
+        "colleague": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 52,
+          "mean_score": 0.03332896995211187
+        },
+        "delivery": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 73,
+          "mean_score": 0.9488127005371826
+        },
+        "hr": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 73,
+          "mean_score": 0.9724967963211925
+        },
+        "invoice": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 59,
+          "mean_score": 0.9713613280683361
+        },
+        "legit_account": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 35,
+          "mean_score": 0.0357509797795102
+        },
+        "legit_delivery": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 44,
+          "mean_score": 0.032813045244097956
+        },
+        "legit_invoice": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 49,
+          "mean_score": 0.0232267559013466
+        },
+        "legit_reset": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 42,
+          "mean_score": 0.03528229204541883
+        },
+        "legit_security": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 56,
+          "mean_score": 0.05507402774701098
+        },
+        "marketing": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 43,
+          "mean_score": 0.053199928487550764
+        },
+        "newsletter": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 47,
+          "mean_score": 0.039269969885666174
+        },
+        "notification": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 46,
+          "mean_score": 0.05351661816021375
+        },
+        "prize": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9538190658578078
+        },
+        "receipt": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 39,
+          "mean_score": 0.042327847857913325
+        },
+        "reset": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9520194361368259
+        },
+        "shipping": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 53,
+          "mean_score": 0.021133286382344112
+        },
+        "support": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 72,
+          "mean_score": 0.9299069137886443
+        }
+      }
+    },
+    "rf": {
+      "precision": 0.9636363636363636,
+      "recall": 0.9814814814814815,
+      "f1": 0.9724770642201835,
+      "roc_auc": 0.9728554894179894,
+      "pr_auc": 0.9639473930166106,
+      "brier": 0.027192234402568054,
+      "confusion_matrix": [
+        [
+          540,
+          20
+        ],
+        [
+          10,
+          530
+        ]
+      ],
+      "per_family": {
+        "account": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9504053445824963
+        },
+        "calendar": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 44,
+          "mean_score": 0.03083337330057724
+        },
+        "ceo": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 69,
+          "mean_score": 0.965465106857416
+        },
+        "colleague": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 52,
+          "mean_score": 0.03352119877639697
+        },
+        "delivery": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 73,
+          "mean_score": 0.960535412348738
+        },
+        "hr": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 73,
+          "mean_score": 0.9667679956192552
+        },
+        "invoice": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 59,
+          "mean_score": 0.9686138805682285
+        },
+        "legit_account": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 35,
+          "mean_score": 0.027495288815068446
+        },
+        "legit_delivery": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 44,
+          "mean_score": 0.027274552197202064
+        },
+        "legit_invoice": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 49,
+          "mean_score": 0.028208752594939154
+        },
+        "legit_reset": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 42,
+          "mean_score": 0.03143691111914055
+        },
+        "legit_security": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 56,
+          "mean_score": 0.03397685057312553
+        },
+        "marketing": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 43,
+          "mean_score": 0.04740390233025598
+        },
+        "newsletter": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 47,
+          "mean_score": 0.03262964099276078
+        },
+        "notification": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 46,
+          "mean_score": 0.03374302568545763
+        },
+        "prize": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9528455175663091
+        },
+        "receipt": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 39,
+          "mean_score": 0.03327093199851573
+        },
+        "reset": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9600672310091027
+        },
+        "shipping": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 53,
+          "mean_score": 0.027262501734117404
+        },
+        "support": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 72,
+          "mean_score": 0.9559828994803818
+        }
+      }
+    },
+    "xgb": {
+      "precision": 0.9531531531531532,
+      "recall": 0.9796296296296296,
+      "f1": 0.9662100456621004,
+      "roc_auc": 0.9756498015873015,
+      "pr_auc": 0.9688944884316893,
+      "brier": 0.029929770792918545,
+      "confusion_matrix": [
+        [
+          534,
+          26
+        ],
+        [
+          11,
+          529
+        ]
+      ],
+      "per_family": {
+        "account": {
+          "type": "phishing",
+          "detection_rate": 0.9852941176470589,
+          "n": 68,
+          "mean_score": 0.9503217811199209
+        },
+        "calendar": {
+          "type": "benign",
+          "false_positive_rate": 0.022727272727272728,
+          "n": 44,
+          "mean_score": 0.040826359731357904
+        },
+        "ceo": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 69,
+          "mean_score": 0.9623183312434063
+        },
+        "colleague": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 52,
+          "mean_score": 0.03685500952514919
+        },
+        "delivery": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 73,
+          "mean_score": 0.9541855796089113
+        },
+        "hr": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 73,
+          "mean_score": 0.962750343966671
+        },
+        "invoice": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 59,
+          "mean_score": 0.962697251031989
+        },
+        "legit_account": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 35,
+          "mean_score": 0.029767637276842812
+        },
+        "legit_delivery": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 44,
+          "mean_score": 0.029644778379224666
+        },
+        "legit_invoice": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 49,
+          "mean_score": 0.030056730663603808
+        },
+        "legit_reset": {
+          "type": "benign",
+          "false_positive_rate": 0.023809523809523808,
+          "n": 42,
+          "mean_score": 0.05615130081396574
+        },
+        "legit_security": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 56,
+          "mean_score": 0.03582584865828908
+        },
+        "marketing": {
+          "type": "benign",
+          "false_positive_rate": 0.09302325581395349,
+          "n": 43,
+          "mean_score": 0.0933290059768719
+        },
+        "newsletter": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 47,
+          "mean_score": 0.04452809344720326
+        },
+        "notification": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 46,
+          "mean_score": 0.033694891221334455
+        },
+        "prize": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9497992822108848
+        },
+        "receipt": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 39,
+          "mean_score": 0.032808437623497194
+        },
+        "reset": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 68,
+          "mean_score": 0.9522779040203802
+        },
+        "shipping": {
+          "type": "benign",
+          "false_positive_rate": 0.0,
+          "n": 53,
+          "mean_score": 0.030180210345557217
+        },
+        "support": {
+          "type": "phishing",
+          "detection_rate": 1.0,
+          "n": 72,
+          "mean_score": 0.9587527959931421
+        }
+      }
+    }
+  },
+  "intrinsic_clean": {
+    "logreg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0
+    },
+    "rf": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0
+    },
+    "xgb": {
+      "precision": 0.9891891891891892,
+      "recall": 0.9981818181818182,
+      "f1": 0.9936651583710407,
+      "roc_auc": 0.9999636363636364
+    }
+  },
+  "best_model": "logreg",
+  "feature_importance_top": {
+    "urgency_term_count": 0.2496167609383459,
+    "url_suspicious_tld": 0.12100364954133791,
+    "url_https_ratio": 0.08113009541396868,
+    "sender_suspicious_tld": 0.07914745405044316,
+    "body_length": 0.07855747849547269,
+    "sender_display_domain_mismatch": 0.051345446831837685,
+    "reply_to_mismatch": 0.04733044977817798,
+    "url_max_entropy": 0.04565419371817582,
+    "url_max_len": 0.04425915847287912,
+    "uppercase_ratio": 0.03834797282812171,
+    "lookalike_brand_distance": 0.03739807814832128,
+    "url_uses_shortener": 0.01688512914919839,
+    "url_max_subdomains": 0.01551647297713891,
+    "credential_term_count": 0.013670668279089337,
+    "digit_letter_substitution": 0.013515223428538597
+  }
+}

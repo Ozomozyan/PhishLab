@@ -1,0 +1,134 @@
+{
+  "projections": [
+    {
+      "technique": "url_shortener",
+      "label": "Raccourcisseurs d'URL",
+      "history": {
+        "2019": 0.2,
+        "2020": 0.27,
+        "2021": 0.33,
+        "2022": 0.38,
+        "2023": 0.42,
+        "2024": 0.45,
+        "2025": 0.47
+      },
+      "forecast": {
+        "2026": 0.552,
+        "2027": 0.6,
+        "2028": 0.646
+      }
+    },
+    {
+      "technique": "lookalike_domain",
+      "label": "Domaines sosies (typosquat)",
+      "history": {
+        "2019": 0.35,
+        "2020": 0.4,
+        "2021": 0.46,
+        "2022": 0.52,
+        "2023": 0.57,
+        "2024": 0.61,
+        "2025": 0.64
+      },
+      "forecast": {
+        "2026": 0.696,
+        "2027": 0.734,
+        "2028": 0.768
+      }
+    },
+    {
+      "technique": "homoglyph",
+      "label": "Homoglyphes Unicode",
+      "history": {
+        "2019": 0.05,
+        "2020": 0.08,
+        "2021": 0.12,
+        "2022": 0.18,
+        "2023": 0.24,
+        "2024": 0.3,
+        "2025": 0.35
+      },
+      "forecast": {
+        "2026": 0.477,
+        "2027": 0.57,
+        "2028": 0.656
+      }
+    },
+    {
+      "technique": "ai_polished",
+      "label": "Texte poli par IA générative",
+      "history": {
+        "2019": 0.02,
+        "2020": 0.03,
+        "2021": 0.05,
+        "2022": 0.1,
+        "2023": 0.22,
+        "2024": 0.38,
+        "2025": 0.52
+      },
+      "forecast": {
+        "2026": 0.67,
+        "2027": 0.788,
+        "2028": 0.862
+      }
+    },
+    {
+      "technique": "qr_code",
+      "label": "QR-codes (quishing)",
+      "history": {
+        "2019": 0.01,
+        "2020": 0.02,
+        "2021": 0.04,
+        "2022": 0.09,
+        "2023": 0.17,
+        "2024": 0.27,
+        "2025": 0.36
+      },
+      "forecast": {
+        "2026": 0.571,
+        "2027": 0.715,
+        "2028": 0.816
+      }
+    },
+    {
+      "technique": "mfa_bypass",
+      "label": "Contournement MFA / OAuth",
+      "history": {
+        "2019": 0.02,
+        "2020": 0.04,
+        "2021": 0.08,
+        "2022": 0.14,
+        "2023": 0.22,
+        "2024": 0.31,
+        "2025": 0.4
+      },
+      "forecast": {
+        "2026": 0.582,
+        "2027": 0.703,
+        "2028": 0.796
+      }
+    }
+  ],
+  "future_robustness": {
+    "baseline_detection": 1.0,
+    "variants": [
+      {
+        "variant": "ia_polie",
+        "detection_attacked": 1.0,
+        "detection_defended": 1.0,
+        "drop": 0.0,
+        "recovered": 0.0,
+        "n": 250
+      },
+      {
+        "variant": "composite_2026",
+        "detection_attacked": 0.952,
+        "detection_defended": 1.0,
+        "drop": 0.048,
+        "recovered": 0.048,
+        "n": 250
+      }
+    ]
+  },
+  "note": "Projections logistiques à partir de tendances sectorielles indicatives. Le test prospectif empile des évasions montantes (texte poli IA + homoglyphes + caractères invisibles) pour mesurer la résilience et justifier le ré-entraînement continu."
+}

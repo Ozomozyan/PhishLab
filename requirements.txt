@@ -1,0 +1,17 @@
+# PhishLab — dépendances Python (testé sous Python 3.12)
+# Installation : pip install -r requirements.txt
+
+# Cœur ML / données
+scikit-learn==1.8.0
+xgboost==3.2.0
+pandas==3.0.2
+numpy==2.4.4
+
+# Explicabilité
+shap==0.52.0
+lime==0.2.0.1
+
+# API & visualisation
+Flask==3.1.3
+matplotlib==3.10.8
+joblib>=1.3
